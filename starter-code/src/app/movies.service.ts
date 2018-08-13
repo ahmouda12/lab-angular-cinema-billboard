@@ -104,7 +104,7 @@ export class MoviesService {
     return this.Movies;
   }
 
-  gitMovie(id: number): Object {
+  getMovie(id: number): Object {
     return _.findWhere(this.Movies, {id: id})
   }
 

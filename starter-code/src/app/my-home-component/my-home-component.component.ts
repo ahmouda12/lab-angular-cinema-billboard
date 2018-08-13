@@ -17,5 +17,7 @@ export class MyHomeComponentComponent implements OnInit {
     this.movies = this.moviesService.getMovies()
   }
 
-
+  viewDetails(id) {
+    this.router.navigate(['movie', id]);
+  }
 }
