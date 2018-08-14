@@ -2,26 +2,28 @@
   <img alt="Ironhack" src="https://miro.medium.com/fit/c/240/240/1*R4stmAmUMIwzP2yjrR82Fw.png" width="120" height="120" alt="ironhack">
   <div>CINEMA</div>
 </div>
-<!-- <div class="movies"> -->
-  <div>ROOM {{movie.id}} {{ movie.title }}</div>
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-4">
-  <img class="poster" src="{{ movie.poster }}">
-  </div>
-  <div class="col-sm-6">
-    <p>Genres: {{movie.genres}}</p>
-    <p>Year: {{movie.year}}</p>
-    <p>Director: {{movie.director}}</p>
-    <p> Actors: </p>
-    <ul *ngFor="let actor of movie.actors">
-      <li>{{actor}}</li>
-    </ul>
-    <!-- <p>{{movie.schedule}}</p> -->
-    <p>Synopsis: {{movie.synopsis}}</p>
-      <button  class="home-btn" (click)="goToHome()"> Home </button>
-  </div>
+<div class="title">Room {{movie.id}} <strong>{{ movie.title }}</strong></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <img class="poster" src="{{ movie.poster }}">
+    </div>
+    <div class="col-sm-6 movies">
+      <p>Genres: {{movie.genres}}</p>
+      <p>Year: {{movie.year}}</p>
+      <p>Director: {{movie.director}}</p>
+      <div> Actors: </div>
+      <div class="side">
+        <ul *ngFor="let actor of movie.actors">
+          <li>{{actor}}</li>
+        </ul>
+      </div>
+      <!-- <p>{{movie.schedule}}</p> -->
+      <div> Synopsis: </div>
+        <p>{{movie.synopsis}}</p>
+        <button  class="home-btn" (click)="goToHome()"> Home </button>
+    </div>
     <div class="col-sm-1"></div>
   </div>
 </div>
